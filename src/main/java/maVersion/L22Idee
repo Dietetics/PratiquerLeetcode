@@ -1,0 +1,15 @@
+a chaque fois, deux sous-branches tant que ≤ n (couvrir tous les cas)
+
+
+
+
+                                            ->4(faire la recursion)
+            ->2(faire la recursion)
+                                            ->5(completer deuxieme if)
+vide -> 1
+                                            ->6(faire la recursion)
+            ->3(completer deuxieme if)
+                                            ->7(completer deuxieme if)
+
+
+

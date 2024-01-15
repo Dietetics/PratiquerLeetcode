@@ -1,3 +1,8 @@
+// notion de revision
+/* 1. En Java, les tableaux (et les objets en général) sont des types de données référence.
+Lorsquon passe un tableau à une méthode,
+on passe essentiellement la référence à ce tableau, pas une copie réelle des données.        */
+
 package maVersion;
 
 import java.util.ArrayList;
@@ -5,28 +10,29 @@ import java.util.List;
 
 public class L22GenateParenthesesMy {
 
+    // generer tous les combinaisons possibles de parentheses avec n paires de parentheses
+    public List<String> generateParenthesis(int n){
+        List<String> sln = new ArrayList<>(); // sln.add("");
 
-    public List<String> generateParenthesis(int n) {
-        List<String> res = new ArrayList<String>();
-        recurse(res, 0, 0, "", n);
-        return res;
-    }
+        // cas initiale
+        int gauche = 0;
+        int droite = 0;
+        String cas = "";
 
-    public void recurse(List<String> res, int left, int right, String s, int n) {
-        if (s.length() == n * 2) {
-            res.add(s);
-            return;
-        }
+        // genere les parentheses a partir de n
+        generer(sln, gauche, droite, cas, n);
 
-        if (left < n) {
-            recurse(res, left + 1, right, s + "(", n);
-        }
-
-        if (right < left) {
-            recurse(res, left, right + 1, s + ")", n);
-        }
+        return sln;
     }
 
 
+    // fonction auxiliaire pour generer les combinaisons
+    public void generer(List<String> sln, int gauche, int droite, String cas, int n){
+        // lorsqu on atteint la longueur en question, elle est donc une combinaison
+        if (cas.length() == n*2) sln.add(cas);
 
+        // deux cas, soit ajouter "(", soit ajouter ")"
+        if (gauche < n) generer(sln, gauche+1, droite, cas + "(", n);
+        if (droite < gauche) generer(sln, gauche, droite+1, cas + ")", n);
+    }
 }

@@ -1,17 +1,16 @@
+//https://leetcode.com/problems/generate-parentheses/solutions/2542620/python-java-w-explanation-faster-than-96-w-proof-easy-to-understand/
+
 package ressources;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class L22GenateParentheses {
-
-
         public List<String> generateParenthesis(int n) {
             List<String> res = new ArrayList<String>();
             recurse(res, 0, 0, "", n);
             return res;
         }
-
         public void recurse(List<String> res, int left, int right, String s, int n) {
             if (s.length() == n * 2) {
                 res.add(s);
@@ -26,7 +25,4 @@ public class L22GenateParentheses {
                 recurse(res, left, right + 1, s + ")", n);
             }
         }
-
-
-
 }

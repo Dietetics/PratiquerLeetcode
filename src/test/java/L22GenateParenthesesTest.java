@@ -27,6 +27,11 @@ public class L22GenateParenthesesTest {
         List<String> result2 = generator.generateParenthesis(2);
         List<String> expected2 = Arrays.asList("(())", "()()");
         assertEquals(expected2, result2);
+
+        // Test avec n = 3
+        List<String> result3 = generator.generateParenthesis(3);
+        List<String> expected3 = Arrays.asList("((()))","(()())","(())()","()(())","()()()");
+        assertEquals(expected3, result3);
     }
 
     @Test
@@ -42,5 +47,10 @@ public class L22GenateParenthesesTest {
         List<String> result2 = generator.generateParenthesis(2);
         List<String> expected2 = Arrays.asList("(())", "()()");
         assertEquals(expected2, result2);
+
+        // Test avec n = 3
+        List<String> result3 = generator.generateParenthesis(3);
+        List<String> expected3 = Arrays.asList("((()))","(()())","(())()","()(())","()()()");
+        assertEquals(expected3, result3);
     }
 }
