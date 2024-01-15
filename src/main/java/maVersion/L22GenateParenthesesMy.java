@@ -1,8 +1,3 @@
-// notion de revision
-/* 1. En Java, les tableaux (et les objets en général) sont des types de données référence.
-Lorsquon passe un tableau à une méthode,
-on passe essentiellement la référence à ce tableau, pas une copie réelle des données.        */
-
 package maVersion;
 
 import java.util.ArrayList;

@@ -1,0 +1,15 @@
+cas1: tableau vide, donc return vide
+cas2: tableau contenant qqch, donc return le resultat ou aucun resultat
+
+idee: un tableau avec i et j comme des pointeurs, puis i != j
+
+donc deux boucles for.
+
+
+
+
+
+
+
+
+REMARQUE: i < nums.length - 1, car si i est le derniere chiffre, alors on na pas besoin d evaluer le prob, car aucun j
