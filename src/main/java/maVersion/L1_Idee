@@ -7,9 +7,30 @@ donc deux boucles for.
 
 
 
-
-
-
-
-
 REMARQUE: i < nums.length - 1, car si i est le derniere chiffre, alors on na pas besoin d evaluer le prob, car aucun j
+
+
+
+
+
+
+Partie comprehension des solutions
+chat: hashmap
+structure de données permettant une récupération et un stockage efficaces des données.
+Il repose sur le principe du hachage, où les clés sont mappées sur des indices dans un tableau
+à l'aide d'une fonction de hachage. Cette correspondance permet un accès rapide aux données,
+ce qui rend les hashmaps utiles pour implémenter des tableaux associatifs, des ensembles et des caches.
+
+
+idee: 
+1. enregistrer les valeurs avec valeur cle avec for 
+2. faire la diff et voir si le resultat de cette difference se trouve dans le tableau et ne doit pas etre lui meme 
+
+rappel:
+Map<Integer, Integer> unHashMap = new HashMap<>(); // type peut varier
+unHashMap.put(nums[i],i)
+unHashMap.containsKey(diff)
+unHashMap.get(i)        // get l index de...
+
+remarque:
+unHashMap.containsKey(diff) && unHashMap.get(diff) // get l index de diff, 
