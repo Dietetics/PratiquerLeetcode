@@ -117,7 +117,7 @@ public class L1TwoSumTest {
 
     @Test
     public void testTwoSumMy2() {
-        L1TwoSum l1TwoSum = new L1TwoSum();
+        L1TwoSumMy l1TwoSum = new L1TwoSumMy();
 
         // cas dun tableau vide
         int[] nums0 = {};
