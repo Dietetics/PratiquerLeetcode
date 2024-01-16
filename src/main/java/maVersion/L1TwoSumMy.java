@@ -1,5 +1,8 @@
 package maVersion;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class L1TwoSumMy {
 
 
@@ -12,8 +15,6 @@ public class L1TwoSumMy {
         // cas dun tableau vide (fourni)
         int[] vide = new int[0];
 
-        System.out.println(nums.length);
-
         // i < nums.length - 1, car si i est le derniere chiffre, alors on na pas besoin d evaluer le prob, car aucun j
         for (int i=0; i < nums.length - 1; i++){
             for (int j=i+1; j< nums.length; j++){
@@ -23,6 +24,28 @@ public class L1TwoSumMy {
                 }
             }
         }
+        return vide;
+    }
+
+
+
+    public int[] twoSum2(int[] nums, int target) {
+
+        Map<Integer, Integer> unHashMap = new HashMap<>();
+
+        int[] vide = new int[0];
+
+        // construire un hashMap
+        for(int i = 0; i < nums.length; i++){
+            unHashMap.put(nums[i],i);
+        }
+
+        for(int i = 0; i < nums.length; i++){
+            int diff = target - nums[i];
+            if (unHashMap.containsKey(diff) && unHashMap.get(diff) != i){
+                int[] res = {i,unHashMap.get(diff)};
+                return res;}
+            }
         return vide;
     }
 }
