@@ -48,4 +48,20 @@ public class L1TwoSumMy {
             }
         return vide;
     }
+
+    public int[] twoSum3(int[] nums, int target) {
+
+        Map<Integer, Integer> hashMap = new HashMap<>();
+        int[] vide = new int[0];
+
+        for(int i = 0; i < nums.length; i++){
+            int diff = target - nums[i];
+            if (hashMap.containsKey(diff)){
+                int[] res = {hashMap.get(diff),i};
+                return res;
+            }
+            hashMap.put(nums[i],i);
+        }
+        return vide;
+    }
 }

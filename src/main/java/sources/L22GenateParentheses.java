@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/generate-parentheses/solutions/2542620/python-java-w-explanation-faster-than-96-w-proof-easy-to-understand/
 
-package ressources;
+package sources;
 
 import java.util.ArrayList;
 import java.util.List;
