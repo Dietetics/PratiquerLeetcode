@@ -1,3 +1,4 @@
+ma version:
 cas1: tableau vide, donc return vide
 cas2: tableau contenant qqch, donc return le resultat ou aucun resultat
 
@@ -10,11 +11,11 @@ donc deux boucles for.
 REMARQUE: i < nums.length - 1, car si i est le derniere chiffre, alors on na pas besoin d evaluer le prob, car aucun j
 
 
-
-
-
-
+-------------------------------------------------------------------------------------
 Partie comprehension des solutions
+
+
+-------------------------------------------------------------------------------------
 chat: hashmap
 structure de données permettant une récupération et un stockage efficaces des données.
 Il repose sur le principe du hachage, où les clés sont mappées sur des indices dans un tableau
@@ -22,7 +23,8 @@ Il repose sur le principe du hachage, où les clés sont mappées sur des indice
 ce qui rend les hashmaps utiles pour implémenter des tableaux associatifs, des ensembles et des caches.
 
 
-idee: 
+-------------------------------------------------------------------------------------
+idee pour la solution deux: 
 1. enregistrer les valeurs avec valeur cle avec for 
 2. faire la diff et voir si le resultat de cette difference se trouve dans le tableau et ne doit pas etre lui meme 
 
@@ -34,3 +36,12 @@ unHashMap.get(i)        // get l index de...
 
 remarque:
 unHashMap.containsKey(diff) && unHashMap.get(diff) // get l index de diff, 
+
+
+-------------------------------------------------------------------------------------
+idee pour la troisieme solution
+1. extraire un element du tableau initiale, faire comparaison avec les elements existants du hashmap 
+( le nombre de comparaison augment au fur et a mesure, mais va necessairement faire tous les comparaisons,
+cest bien la question dordre inverse de comparaison avec la solution brute )
+
+

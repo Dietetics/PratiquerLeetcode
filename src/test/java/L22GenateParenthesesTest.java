@@ -1,9 +1,8 @@
 // import pour les tests
 import org.junit.Test;
 
-// import mes deux versions
-import ressources.L22GenateParentheses;
 import maVersion.L22GenateParenthesesMy;
+import sources.L22GenateParentheses;
 
 // import pour assert (comparaison)
 import static org.junit.Assert.assertEquals;
